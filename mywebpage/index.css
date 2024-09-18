@@ -1,0 +1,23 @@
+body {
+	background-color: LightCyan;
+}
+header {
+	background-color: LightSteelBlue;
+}
+header, #main, #pictures {
+	display: flex;
+}
+header div {
+	flex: 1;
+	text-align: left;
+	column-gap: 10%;
+}
+#main div {
+	flex: 1;
+}
+.author {
+	text-align: right;
+}
+.courses {
+	font-style: italic;
+}

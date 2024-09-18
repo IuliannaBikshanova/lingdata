@@ -1,123 +1,127 @@
 <!doctype html>
-
-<!-- так в HTML обозначаются комментарии. Выше вы видите объявление типа документа (DOCTYPE), так браузер понимает, что код ниже нужно интерпретировать как html -->
-
 <html>
-
-<!-- зона заголовка html, тег <title> - строка, которую браузер отображает на вкладках над страницами, <meta> и <link> сообщают технические сведения для браузера, например, что файл имеет кодировку Юникод (utf-8) -->
-
 	<head>
-		<title>Личная страница Веры Кузнецовой</title>
-	 	<!-- Required meta tags -->
-	 	<meta charset="utf-8">
-	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<meta name="description" content="Личная страница и контакты">
-
-		<!-- Bootstrap Core CSS -->
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<!-- Эта страница сделана с помощью bootstrap - популярной библиотеки для создания и настройки сайтов. Ниже вы увидите, что многие теги содержат атрибуты class - bootstrap содержит шаблоны, как такие элементы красиво оформить -->
-
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<head>
+		<title>Личная страница Юлианны Бикшановой</title>
+		<!--чистый html и css! никаких бутстрапов! делить ли страницу на логические блоки(див, артикл, нав и тд)? -->
+		<link href="index.css" rel="stylesheet">
 	</head>
-	
-<!-- body - главная, содержательная часть страницы. Контент на этой странице делится на меню (nav), "шапку" (header), "подвал" (footer) и все остальное (мы заключили остаток в тег section) -->	
 	<body>
-
-<!-- меню (navigation bar) -->
-
-		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-
-<!-- div - это контейнеры - коробочки с текстом и/или графикой, которые можно вкладывать друг в друга. Пристально смотреть на теги в этой части кода не нужно -->
-			<div class="container"> 
-				<div class="navbar-header"> 
-					<a href="https://ling.hse.ru/" class="navbar-brand">Школа лингвистики НИУ ВШЭ</a> 
-				</div> 
-				<nav class="collapse navbar-collapse" id="bs-navbar"> 
-					<ul class="nav navbar-nav navbar-right"> 
-						<li> <a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2021/index.html">Страница курса</a> </li> 
-						<li> <a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2021/latin_2.html">Страница группы</a> </li> 
-<!-- поправьте номер группы в URL, если нужно (от 1 до 4) -->
-					</ul>
-				</nav> 
+		<header>
+			<div>
+				<p>Внимание!Никаких Bootstrap!</p>
+				<h1>Юлианна Бикшанова</h1>
+				<hr>
+				
+				<h3>Родной город</h3>
+				<p>Екатеринбург</p>
+				<h3>Где я учусь?</h3>
+				<ol>
+					<li>Школа №80 г. Екатеринбурга</li>
+					<li>Гимназия № 9 г.Екатеринбурга ("Девятка")</li>
+					<li>Фундаментальная и компьютерная лингвистика, НИУ ВШЭ, Москва</li>
+				</ol>
+				<!--добавить "ленту времени" школу и гимназию бледным шрифтом, кружочки 
+				закрашены, вшэ ярче, кружочек пустой.Зачеркнутым шрифтом мини версию. См эскиз стр в тетради -->
+				<p></p>
+				<!-- СХУ сделать ссылкой?-->
 			</div>
-		</nav>
-
-<!-- начинается шапка. у тега header есть атрибут style, который задает цвет фона и отступы. поменяйте значения атрибутов и посмотрите, как изменится страница -->
-
-		<header style="background-color:plum; padding-top:70px; "> 
-			<div class="container"> 
-				<div class="row">
-					<div class="col-md-4">
-						<br><br>
-<!-- здесь и дальше нужно поменять весь содержательный текст, чтобы получилась ваша личная страница -->
-						<h1>Оля Ляшевская</h1>
-						<hr> <!-- это горизонтальная линия -->
-						<p><i>Человек, умеющий <b>создавать</i> HTML</b></p> 
-					</div>
-					<div class="col-md-4">
-<!-- img - тег для вставки изображений. Мы использовали атрибут style, чтобы задать размер изображения и ширину рамки-->
-<!-- Измените URL на URL вашей фотографии, а также настройте размер изображения -->
-<img src="myphoto.jpg" style="height:320px; margin:20px 20px 40px 20px; " >
-					</div>
-				</div>
+			<div> 
+				<a href="myphoto.jpg">
+					<img src="myphoto.jpg" width="240" height="320">
+				</a>
+			</div>
+			<div>
+				<a href="https://ling.hse.ru/">
+					<p>Школа лингвистики НИУ ВШЭ</p>
+				</a>
+				<a href="https://olesar.github.io/lingdata/"
+					<p>Страница курса</p>
+				</a>
+				<a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2024/baling_2024_lat1.html"
+				>
+					<p>Страница группы</p>
+				</a>
 			</div>
 		</header>
-
-<!-- часть страницы, которая под шапкой -->
-		<section id="portfolio">
-			<div class="container">
-
-<!-- атрибут col-md-... говорит, что контент будет разделен на несколько столбцов, их ширина соотносится как 3 - 6 - 3 (Bootstrap использует воображаемую сетку из 12 равных по ширине колонок) -->
-				<div class="col-md-3">
-
-<!-- <article> не влияет на оформление, но помогает структурировать контент на осмысленые разделы -->
-					<article>
-						<h3>Место учебы</h3>
-						<p>Фундаментальная и прикладная лингвистика, НИУ ВШЭ, Москва</p>
-					</article>
-					<article>
-						<h3>Родной город</h3>
-						<p>Москва</p>
-					</article>
-					<article>
-						<h3>Школа</h3>
-<!-- когда будете менять текст, не используйте бюрократических слов типа ГБОУ СОШ, ну пожаалуйста -->
-						<p>СУНЦ НГУ</p>
-					</article>
-				</div>
-
-				<div class="col-md-6">
-					<article>
-						<h3>Тут можно написать</h3>
-						<p>Еще много много много много много много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						всего о себе</p>
-					</article>
-				</div>
-
-				<div class="col-md-3">
-					<h3>Я в соцсетях</h3>
-<!-- тег <ul> - unordered list. Еще бывает тег <ol> -->
-					<ul>
-						<li>VK</li>
-						<li>Discord</li>
-						<li>Telegram</li>
-					</ul>
-				</div>
+		
+		<div id="main">
+			<div>
+				<h2>Что меня вдохновляет</h2>
+				<!-- png with headphones-- композиция "Облака" Дебюсс.и - музыка, с котор
+				ой я ассоциирую себя - переформулировать.Добавить мп 3 файл Списки!!!-->
+				<ul>
+					<li>лингвистика</li>
+					<li>долгие прогулки по городу</li>
+					<li>вязание</li>
+					<li>тишина</li>
+					<li>рисование</li>
+				</ul>
 			</div>
-		</section>
-
-<!-- это подвал. В этой части страницы обычно ставят копирайт (с помощью символа &copy;) и пишут об истории создания страницы. Поставьте свой копирайт -->
-		<footer class="bs-docs-footer"> 
-			<div class="container"> 
-				<p style="text-align:right; ">&copy; В. Кузнецова, 2024</p> 
+			<div>
+				<p>Вплоть до 10 класса, что основным занятием в моей жизни станет
+				что-то творческое, связанное с искусством. Дизайн, станковая или монументальная живопись, графика, архитектура, искусствоедение... Я не знала, кем конкретно я хочу работать, но моей мечтой долго было поступить в лучшие художественное вузы: Академия Художеств имени Репина, МГАХИ им. Сурикова, Академия Андрияки...<br>
+				<br>
+				<!--ссылки на программы Сириуса -->
+				Большую часть времени я проводила в художественной школе(и, кстати, окончила ее с отличием), побеждала в конкурсах по академическому рисунку, живописи и композиции.<br>
+				<br>
+				Четыре раза была в образовательном центре "Сириус": на программах <span class="courses"> "Академический рисунок и скульптура", "Акварельная живопись", "Масляная живопись", "Композиционный рисунок"</span>. После 9 класса чуть не поступила в Свердловское художественное училище им. Шадра на
+				специальность"Художник-педагог", но<br>
+				<br>
+				<br>
+				<br>
+				10 класс, олимпиады по русскому и лингвистике, и вот я в Вышке
+				</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+				<!-- при наведении на надпись фото становятся крупнее. Наброски, сепия, тушь, акварель, зарисовки на пленэры, академичечский рисунок, акварель, масло, мягкие материалы, любимая композиция -->	
 			</div>
-		</footer>
+			<div>
+				<h3>Любимые цитаты</h3>
+				<blockquote>The painter, when at a distance from the easel, can assess and analyze the whole of the work from this vantage. He scrutinizes and listens, chooses the next stroke to make, then approaches the canvas to do it. Then, he steps back again to see what he’s done in relation to the whole. It is a dance of switching contexts, a pitter-patter pacing across the studio floor that produces a tight feedback loop between mark-making and mark-assessing.
+				</blockquote>
+				<p class="author">Frank Chimero</p>
+				<!--dance of swithcing contexts выделить ярким. все оформить как цитаты -->
+				<blockquote>"Язык, выразился он, иногда вместо дороги превращается в барьер" </blockquote>
+				<p class="author">Дэниэл Киз, "Цветы для Элджернона"</p>
+				<blockquote>Цитата не есть выписка. Цитата есть цикада. Неумолкаемость ей свойственна. Вцепившись в воздух, она его не отпускает. Эрудиция далеко не тождественна упоминательной клавиатуре, которая и составляет самую сущность образования.</blockquote>
+				<p class="author">О.Мандельштам</p>
+			</div>
+		</div>
+		<h3>Мои работы. Нажмите на картинку, чтобы рассмотреть</h3>
+		<div id="pictures">
+			<a href="excibition.jpg">
+				<img src="excibition.jpg" width="240" height="320">
+			</a>
+			<a href="markers.jpg">
+				<img src="markers.jpg" width="240" height="320">
+			</a>
+			<a href="oiloncanvas.jpg">
+				<img src="oiloncanvas.jpg" width="240" height="320">
+			</a>
+				<a href="sketch.jpg">
+				<img src="sketch.jpg" width="240" height="320">
+			</a>
+			<a href="sketch1.jpg">
+				<img src="sketch1.jpg" width="240" height="320">
+			</a>
+		</div>
+		
+		
+		
+		
+		
+		
+		<p>Если вы хотите свой портретик или картинку в ручной графике, то можете написать мне в соцсетях:</p>
+		<!-- -->
+		<a href="https://t.me/@nnnnnuuskamuikkunen">Телеграм</a><br>
+		<a href="https://vk.com/nnnnnuuskamuikkunen">Вконтакте</a>
+        <!--  - фото-->
+		<p style="text-align:right; ">&copy;Ю.Бикшанова, 2024</p>
+		
 	</body>
 </html>
